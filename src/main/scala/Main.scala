@@ -26,7 +26,7 @@ object Main {
 
     val postsPath = "C:/Users/Vladislav/Desktop/Big data/L2/Posts.xml"
     val langPath = "C:/Users/Vladislav/Desktop/Big data/L2/programming_languages.csv"
-    val reportPath = "C:/Users/Vladislav/Desktop/Big data/L2/report.parquet"
+    val reportPath = "C:/Users/Vladislav/IdeaProjects/bigdata_lab2_2/report.parquet"
 
     val langDf = spark.read.option("header", value = true).csv(langPath)
     val languages = langDf.withColumn("name", trim(lower(langDf("name"))))
